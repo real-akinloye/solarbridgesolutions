@@ -15,9 +15,9 @@ export const Navbar = () => {
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-            <span className="text-accent-foreground font-bold text-xl">F</span>
+            <span className="text-accent-foreground font-bold text-xl">SB</span>
           </div>
-          <span className="text-xl font-bold text-foreground">Felicity Solar</span>
+          <span className="text-xl font-bold text-foreground">Solar Bridge</span>
         </div>
 
         {/* Desktop Navigation */}
@@ -41,7 +41,7 @@ export const Navbar = () => {
             Products
           </button>
           <a
-            href="https://api.whatsapp.com/send/?text=Hi%20Felicity%20Solar,%20I%20need%20a%20free%20quote&phone=2348171479561"
+            href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -79,7 +79,7 @@ export const Navbar = () => {
                 Products
               </button>
               <a
-                href="https://api.whatsapp.com/send/?text=Hi%20Felicity%20Solar,%20I%20need%20a%20free%20quote&phone=2348171479561"
+                href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
                 target="_blank"
                 rel="noopener noreferrer"
               >

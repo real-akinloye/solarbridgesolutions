@@ -8,9 +8,9 @@ export const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-xl">F</span>
+                <span className="text-accent-foreground font-bold text-xl">SB</span>
               </div>
-              <span className="text-xl font-bold">Felicity Solar</span>
+              <span className="text-xl font-bold">Solar Bridge</span>
             </div>
             <p className="text-primary-foreground/80 mb-4">
               Leading provider of sustainable solar energy solutions in Nigeria since 2016.
@@ -85,10 +85,10 @@ export const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 flex-shrink-0" />
                 <a 
-                  href="mailto:info@felicitysolar.ng" 
+                  href="mailto:info@solarbridge.ng" 
                   className="text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  info@felicitysolar.ng
+                  info@solarbridge.ng
                 </a>
               </li>
             </ul>
@@ -97,7 +97,7 @@ export const Footer = () => {
 
         <div className="pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-primary-foreground/60">
-            © {new Date().getFullYear()} Felicity Solar Nigeria Ltd. All rights reserved.
+            © {new Date().getFullYear()} Solar Bridge Solutions. All rights reserved.
           </p>
         </div>
       </div>

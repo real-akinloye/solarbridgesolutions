@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 17% 95%;
     --muted-foreground: 220 9% 46%;
 
-    --accent: 24 95% 53%;
+    --accent: 210 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -44,7 +44,7 @@ All colors MUST be HSL.
     --hero-overlay: 221 83% 15%;
     
     --gradient-hero: linear-gradient(135deg, hsl(221 83% 25% / 0.9), hsl(221 83% 15% / 0.85));
-    --gradient-accent: linear-gradient(135deg, hsl(24 95% 53%), hsl(24 95% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(210 100% 50%), hsl(210 100% 60%));
     
     --shadow-soft: 0 4px 6px -1px hsl(221 83% 25% / 0.1), 0 2px 4px -1px hsl(221 83% 25% / 0.06);
     --shadow-medium: 0 10px 15px -3px hsl(221 83% 25% / 0.1), 0 4px 6px -2px hsl(221 83% 25% / 0.05);
@@ -88,7 +88,7 @@ All colors MUST be HSL.
     --muted: 220 26% 22%;
     --muted-foreground: 220 9% 65%;
 
-    --accent: 24 95% 53%;
+    --accent: 210 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 50%;
@@ -104,7 +104,7 @@ All colors MUST be HSL.
     --hero-overlay: 221 83% 10%;
     
     --gradient-hero: linear-gradient(135deg, hsl(220 26% 14% / 0.95), hsl(220 26% 10% / 0.9));
-    --gradient-accent: linear-gradient(135deg, hsl(24 95% 53%), hsl(24 95% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(210 100% 50%), hsl(210 100% 60%));
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -123,5 +123,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
   }
 }

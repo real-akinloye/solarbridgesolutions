@@ -29,9 +29,9 @@ export const Products = () => {
   return (
     <section id="products" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 space-y-4">
+        <div className="text-center mb-12 space-y-4 animate-fade-in">
           <p className="text-accent font-semibold text-sm uppercase tracking-wider">
-            Felicity Solar Products
+            Solar Bridge Products
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             What do we Offer to you?
@@ -45,7 +45,7 @@ export const Products = () => {
           {products.map((product) => (
             <Card 
               key={product.id} 
-              className="overflow-hidden hover:shadow-xl transition-shadow duration-300 border-border"
+              className="overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover-scale"
             >
               <CardHeader className="p-0">
                 <div className="aspect-square overflow-hidden bg-secondary">
