@@ -1,45 +1,71 @@
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
             <span className="text-accent-foreground font-bold text-xl">SB</span>
           </div>
-          <span className="text-xl font-bold text-foreground">Solar Bridge</span>
-        </div>
+          <span className="text-xl font-bold text-primary-foreground">Solar Bridge</span>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <button
-            onClick={() => scrollToSection("home")}
-            className="text-foreground hover:text-accent transition-colors"
+          <Link
+            to="/"
+            className={`transition-colors ${
+              location.pathname === "/" ? "text-accent" : "text-primary-foreground hover:text-accent"
+            }`}
           >
             Home
-          </button>
-          <button
-            onClick={() => scrollToSection("about")}
-            className="text-foreground hover:text-accent transition-colors"
+          </Link>
+          <Link
+            to="/about"
+            className={`transition-colors ${
+              location.pathname === "/about" ? "text-accent" : "text-primary-foreground hover:text-accent"
+            }`}
           >
             About
-          </button>
-          <button
-            onClick={() => scrollToSection("products")}
-            className="text-foreground hover:text-accent transition-colors"
+          </Link>
+          <Link
+            to="/products"
+            className={`transition-colors ${
+              location.pathname === "/products" ? "text-accent" : "text-primary-foreground hover:text-accent"
+            }`}
           >
             Products
-          </button>
+          </Link>
+          <Link
+            to="/services"
+            className={`transition-colors ${
+              location.pathname === "/services" ? "text-accent" : "text-primary-foreground hover:text-accent"
+            }`}
+          >
+            Services
+          </Link>
+          <Link
+            to="/find-installer"
+            className={`transition-colors ${
+              location.pathname === "/find-installer" ? "text-accent" : "text-primary-foreground hover:text-accent"
+            }`}
+          >
+            Find Installer
+          </Link>
+          <Link
+            to="/contact"
+            className={`transition-colors ${
+              location.pathname === "/contact" ? "text-accent" : "text-primary-foreground hover:text-accent"
+            }`}
+          >
+            Contact
+          </Link>
           <a
             href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
             target="_blank"
@@ -54,30 +80,30 @@ export const Navbar = () => {
         {/* Mobile Navigation */}
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" className="text-primary-foreground">
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
           <SheetContent>
             <div className="flex flex-col gap-4 mt-8">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="text-foreground hover:text-accent transition-colors text-left"
-              >
+              <Link to="/" className="text-foreground hover:text-accent transition-colors text-left">
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-foreground hover:text-accent transition-colors text-left"
-              >
+              </Link>
+              <Link to="/about" className="text-foreground hover:text-accent transition-colors text-left">
                 About
-              </button>
-              <button
-                onClick={() => scrollToSection("products")}
-                className="text-foreground hover:text-accent transition-colors text-left"
-              >
+              </Link>
+              <Link to="/products" className="text-foreground hover:text-accent transition-colors text-left">
                 Products
-              </button>
+              </Link>
+              <Link to="/services" className="text-foreground hover:text-accent transition-colors text-left">
+                Services
+              </Link>
+              <Link to="/find-installer" className="text-foreground hover:text-accent transition-colors text-left">
+                Find Installer
+              </Link>
+              <Link to="/contact" className="text-foreground hover:text-accent transition-colors text-left">
+                Contact
+              </Link>
               <a
                 href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
                 target="_blank"
