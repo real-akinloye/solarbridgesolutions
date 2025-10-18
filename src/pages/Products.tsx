@@ -5,7 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import solarPanelImage from "@/assets/solar-panel.jpg";
 import inverterImage from "@/assets/inverter.jpg";
+import inverterNewImage from "@/assets/inverter-new.png";
 import batteryImage from "@/assets/battery.jpg";
+import batteryNewImage from "@/assets/battery-new.jpg";
+import estateMiniGridImage from "@/assets/estate-mini-grid.jpg";
+import floatingSolarImage from "@/assets/floating-solar.jpg";
+import centralizedSolarImage from "@/assets/centralized-solar.jpg";
+import solarStreetLightImage from "@/assets/solar-street-light.jpg";
 
 const Products = () => {
   const solarPanels = [
@@ -48,7 +54,7 @@ const Products = () => {
       capacity: "5.12kWh",
       type: "Lithium",
       warranty: "10 Years",
-      image: batteryImage
+      image: batteryNewImage
     },
     {
       name: "Deep Cycle 200Ah",
@@ -56,6 +62,37 @@ const Products = () => {
       type: "Deep Cycle",
       warranty: "2 Years",
       image: batteryImage
+    }
+  ];
+
+  const solutions = [
+    {
+      name: "Estate Mini Grid Solutions",
+      description: "Complete solar power systems for residential estates and communities",
+      features: ["Scalable design", "Smart metering", "Remote monitoring"],
+      warranty: "15 Years",
+      image: estateMiniGridImage
+    },
+    {
+      name: "Floating Solar System",
+      description: "Innovative water-based solar installations for reservoirs and lakes",
+      features: ["Space efficient", "Cooling effect", "Reduced evaporation"],
+      warranty: "20 Years",
+      image: floatingSolarImage
+    },
+    {
+      name: "Complex Centralized Solar System",
+      description: "Industrial-grade centralized power systems for large facilities",
+      features: ["High capacity", "Advanced controls", "Grid integration"],
+      warranty: "25 Years",
+      image: centralizedSolarImage
+    },
+    {
+      name: "Solar Street Light",
+      description: "Smart LED street lighting powered entirely by solar energy",
+      features: ["Motion sensor", "All-night operation", "Weather resistant"],
+      warranty: "5 Years",
+      image: solarStreetLightImage
     }
   ];
 
@@ -81,10 +118,11 @@ const Products = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="panels" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-12">
+            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-12">
               <TabsTrigger value="panels">Solar Panels</TabsTrigger>
               <TabsTrigger value="inverters">Inverters</TabsTrigger>
               <TabsTrigger value="batteries">Batteries</TabsTrigger>
+              <TabsTrigger value="solutions">Solutions</TabsTrigger>
             </TabsList>
 
             <TabsContent value="panels" className="animate-fade-in">
@@ -164,6 +202,37 @@ const Products = () => {
                         <p><strong>Capacity:</strong> {product.capacity}</p>
                         <p><strong>Type:</strong> {product.type}</p>
                         <p><strong>Warranty:</strong> {product.warranty}</p>
+                      </div>
+                    </CardContent>
+                    <CardFooter className="p-6 pt-0">
+                      <Button variant="hero" className="w-full">Get Quote</Button>
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="solutions" className="animate-fade-in">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {solutions.map((product, index) => (
+                  <Card key={index} className="overflow-hidden hover-scale">
+                    <CardHeader className="p-0">
+                      <div className="aspect-square overflow-hidden bg-secondary">
+                        <img
+                          src={product.image}
+                          alt={`${product.name}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-6">
+                      <CardTitle className="text-2xl mb-4">{product.name}</CardTitle>
+                      <p className="text-muted-foreground mb-4">{product.description}</p>
+                      <div className="space-y-2 text-muted-foreground">
+                        {product.features.map((feature, fIndex) => (
+                          <p key={fIndex}>• {feature}</p>
+                        ))}
+                        <p className="pt-2"><strong>Warranty:</strong> {product.warranty}</p>
                       </div>
                     </CardContent>
                     <CardFooter className="p-6 pt-0">

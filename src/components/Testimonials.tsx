@@ -36,8 +36,8 @@ export const Testimonials = () => {
         </div>
 
         <div className="relative max-w-6xl mx-auto">
-          {/* Central phone mockup placeholder - you can replace with actual image */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-96 md:w-80 md:h-[500px] bg-primary rounded-3xl shadow-2xl flex items-center justify-center">
+          {/* Central phone mockup placeholder - hidden on mobile to fix layout */}
+          <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[500px] bg-primary rounded-3xl shadow-2xl">
             <div className="w-full h-full bg-gradient-to-br from-accent to-primary rounded-3xl p-8 flex items-center justify-center">
               <p className="text-primary-foreground text-center font-semibold">Solar Installation</p>
             </div>

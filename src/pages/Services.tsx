@@ -36,34 +36,38 @@ const Services = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section with Video Background */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src={servicesVideo} type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-primary/80" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              Our <span className="text-accent">Services</span>
-            </h1>
-            <p className="text-xl text-primary-foreground/90">
-              Comprehensive solar solutions tailored to your needs
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Full Page Video Background */}
+      <div className="fixed inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={servicesVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-primary/40" />
+      </div>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-background">
+      {/* Scrollable Content */}
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center justify-center pt-32 pb-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center animate-fade-in">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Our <span className="text-accent">Services</span>
+              </h1>
+              <p className="text-xl text-white/90">
+                Comprehensive solar solutions tailored to your needs
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20 bg-background/95 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => {
@@ -94,8 +98,8 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-secondary">
+        {/* Process Section */}
+        <section className="py-20 bg-secondary/95 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -120,10 +124,11 @@ const Services = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 };

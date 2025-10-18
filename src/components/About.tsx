@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import aboutImage from "@/assets/about-solar.jpg";
+import aboutImage from "@/assets/solar-installation.jpg";
 
 export const About = () => {
   return (
@@ -16,13 +16,19 @@ export const About = () => {
             
             <div className="space-y-4 text-muted-foreground text-lg">
               <p>
-                Established in 2016 and headquartered in Festac, Lagos, Solar Bridge Solutions has grown to become one of the most recognized and trusted solar energy brands in the country.
+                At Solar Bridge Solution Limited, we are more than just a solar energy company, we are energy explorers, forging new frontiers in sustainable power across Africa. Founded with a daring vision to transform how energy is accessed, consumed, and shared, Solar Bridge is on a bold mission to light up homes, businesses, and communities using the limitless power of the sun.
               </p>
               <p>
-                With a strong focus on sales and after-sales support, we have built a robust network of over 12 service centers across Nigeria—ensuring fast, efficient, and professional assistance for our customers nationwide.
+                Every project we embark on is an adventure into a cleaner, smarter future. From rooftop systems in remote villages to industrial grade installations in urban centers, we bridge the gap between today's energy challenges and tomorrow's solutions.
               </p>
               <p className="font-semibold text-foreground">
-                Solar Bridge is a forward-thinking company committed to advancing clean energy solutions
+                <strong>Our Mission:</strong> To free Nigerian businesses from fuel dependency.
+              </p>
+              <p className="font-semibold text-foreground">
+                <strong>Our Vision:</strong> A Nigeria where every business is powered by safe, sustainable energy.
+              </p>
+              <p className="font-semibold text-foreground">
+                <strong>Our Core Values:</strong> Innovation • Reliability • Safety • Affordability • Sustainability
               </p>
             </div>
 
@@ -35,7 +41,7 @@ export const About = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src={aboutImage} 
-                alt="About Solar Bridge - Professional solar panel installation"
+                alt="Professional technician installing solar panels"
                 className="w-full h-auto object-cover"
               />
             </div>

@@ -71,24 +71,24 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-                <span className="text-primary-foreground/80">Festac, Lagos, Nigeria</span>
+                <span className="text-primary-foreground/80">7, Jeminata Street, Alagba, Agege, Lagos State</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 flex-shrink-0" />
                 <a 
-                  href="tel:+2348171479561" 
+                  href="tel:+2348146249855" 
                   className="text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  +234 817 147 9561
+                  +234-814-624-9855
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 flex-shrink-0" />
                 <a 
-                  href="mailto:info@solarbridge.ng" 
+                  href="mailto:info@solarbridgesolution.com" 
                   className="text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  info@solarbridge.ng
+                  info@solarbridgesolution.com
                 </a>
               </li>
             </ul>
