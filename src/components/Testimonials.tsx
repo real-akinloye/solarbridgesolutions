@@ -1,60 +1,80 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
-
 const testimonials = [
   {
     id: 1,
-    name: "Adebayo Johnson",
-    location: "Lagos",
-    rating: 5,
-    text: "Solar Bridge Solution transformed our home with a reliable solar system. Our electricity bills have dropped significantly!"
+    name: "Mrs. Bisi, Proprietor",
+    company: "BrightMinds School",
+    text: "Our classrooms are finally free from generator noise. Parents love the fact that we're creating a healthier, cleaner environment.",
+    position: "top-left"
   },
   {
     id: 2,
-    name: "Chioma Okafor",
-    location: "Abuja",
-    rating: 5,
-    text: "Professional service from start to finish. The team was knowledgeable and the installation was seamless."
+    name: "Tunde",
+    company: "Tech Hub Manager",
+    text: "Since installing SolarBridge, we've had uninterrupted energy. The productivity boost has been amazing.",
+    position: "bottom-left"
   },
   {
     id: 3,
-    name: "Ibrahim Mohammed",
-    location: "Kano",
-    rating: 5,
-    text: "Best investment we made for our business. The solar system pays for itself with the energy savings."
+    name: "Mr. Adewale, Manager",
+    company: "MedCare Pharmacy",
+    text: "SolarBridge helped us cut down fuel expenses drastically. For the first time in 3 years, our operational costs are down, and we're saving for the future. The savings are unbelievable.",
+    position: "right"
   }
 ];
 
 export const Testimonials = () => {
   return (
-    <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            What Our Clients Say
+    <section className="py-20 bg-background relative overflow-hidden">
+      {/* Decorative orange corner */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF8C00] transform rotate-45 translate-x-32 -translate-y-32" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold" style={{ color: '#FF8C00' }}>
+            Testimonials
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Don't just take our word for it - hear from our satisfied customers
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="hover-scale bg-card">
-              <CardContent className="p-6">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
+        <div className="relative max-w-6xl mx-auto">
+          {/* Central phone mockup placeholder - you can replace with actual image */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-96 md:w-80 md:h-[500px] bg-primary rounded-3xl shadow-2xl flex items-center justify-center">
+            <div className="w-full h-full bg-gradient-to-br from-accent to-primary rounded-3xl p-8 flex items-center justify-center">
+              <p className="text-primary-foreground text-center font-semibold">Solar Installation</p>
+            </div>
+          </div>
+
+          {/* Testimonial bubbles */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16">
+            {/* Left column */}
+            <div className="space-y-8 md:space-y-16">
+              {testimonials.slice(0, 2).map((testimonial) => (
+                <div key={testimonial.id} className="animate-fade-in">
+                  <div className="bg-primary text-primary-foreground rounded-3xl p-6 shadow-lg max-w-sm">
+                    <p className="text-sm md:text-base mb-4 leading-relaxed">"{testimonial.text}"</p>
+                  </div>
+                  <div className="mt-3">
+                    <p className="font-bold" style={{ color: '#FF8C00' }}>{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                  </div>
                 </div>
-                <p className="text-muted-foreground mb-6 italic">"{testimonial.text}"</p>
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+              ))}
+            </div>
+
+            {/* Right column */}
+            <div className="flex items-center">
+              {testimonials.slice(2).map((testimonial) => (
+                <div key={testimonial.id} className="animate-fade-in w-full">
+                  <div className="bg-primary text-primary-foreground rounded-3xl p-6 shadow-lg max-w-sm ml-auto">
+                    <p className="text-sm md:text-base mb-4 leading-relaxed">"{testimonial.text}"</p>
+                  </div>
+                  <div className="mt-3 text-right">
+                    <p className="font-bold" style={{ color: '#FF8C00' }}>{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
