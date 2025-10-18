@@ -1,7 +1,7 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import solarPanelImage from "@/assets/solar-panel.jpg";
-import inverterImage from "@/assets/inverter.jpg";
+import inverterImage from "@/assets/inverter-new.jpg";
 import batteryImage from "@/assets/battery.jpg";
 
 const products = [

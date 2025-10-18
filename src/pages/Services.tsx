@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wrench, Building2, Home, Factory, CheckCircle } from "lucide-react";
+import servicesVideo from "@/assets/services-video.mp4";
 
 const Services = () => {
   const services = [
@@ -35,9 +36,21 @@ const Services = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-primary">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Video Background */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src={servicesVideo} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-primary/80" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
               Our <span className="text-accent">Services</span>

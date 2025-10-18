@@ -5,15 +5,24 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import solarFarmBg from "@/assets/solar-farm.png";
 
 const Contact = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-primary">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Solar Farm Background */}
+      <section className="relative pt-32 pb-20">
+        <div className="absolute inset-0">
+          <img 
+            src={solarFarmBg} 
+            alt="Solar farm background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/80" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
               Contact <span className="text-accent">Us</span>

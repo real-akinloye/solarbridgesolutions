@@ -13,6 +13,12 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'sans': ['Space Grotesk', 'Inter', 'Poppins', 'system-ui', 'sans-serif'],
+        'grotesk': ['Space Grotesk', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
