@@ -30,7 +30,7 @@ export const ServicesPreview = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 animate-fade-in">
+        <div className="text-center mb-12 slide-in-bottom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Our Services
           </h2>
@@ -43,7 +43,7 @@ export const ServicesPreview = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="hover-scale bg-card">
+              <Card key={index} className="hover-scale bg-card bounce-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-accent mx-auto rounded-none flex items-center justify-center mb-4">
                     <Icon className="w-8 h-8 text-accent-foreground" />
@@ -56,9 +56,9 @@ export const ServicesPreview = () => {
           })}
         </div>
 
-        <div className="text-center">
+        <div className="text-center slide-in-bottom" style={{ animationDelay: '0.5s' }}>
           <Link to="/services">
-            <Button size="lg" variant="default">
+            <Button size="lg" variant="default" className="hover-scale pulse-slow">
               View All Services
             </Button>
           </Link>

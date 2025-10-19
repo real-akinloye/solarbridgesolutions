@@ -50,11 +50,11 @@ const FindInstaller = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-primary">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              Find an <span className="text-accent">Installer</span>
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 slide-in-bottom">
+              Find an <span className="text-accent float">Installer</span>
             </h1>
-            <p className="text-xl text-primary-foreground/90">
+            <p className="text-xl text-primary-foreground/90 slide-in-right" style={{ animationDelay: '0.2s' }}>
               Locate our service centers across Nigeria
             </p>
           </div>
@@ -64,7 +64,7 @@ const FindInstaller = () => {
       {/* Locations Grid */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in">
+          <div className="text-center mb-12 bounce-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Our Service Centers
             </h2>
@@ -75,7 +75,11 @@ const FindInstaller = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {locations.map((location, index) => (
-              <Card key={index} className="hover-scale">
+              <Card 
+                key={index} 
+                className="hover-scale slide-in-bottom" 
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <CardHeader>
                   <CardTitle className="text-2xl text-accent">{location.city}</CardTitle>
                 </CardHeader>
@@ -106,7 +110,7 @@ const FindInstaller = () => {
       {/* CTA Section */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
+          <div className="max-w-3xl mx-auto text-center slide-in-bottom">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Need Help Finding the Right Location?
             </h2>
@@ -117,9 +121,10 @@ const FindInstaller = () => {
               href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20help%20finding%20an%20installer&phone=2348171479561"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block"
+              className="inline-block bounce-in"
+              style={{ animationDelay: '0.3s' }}
             >
-              <button className="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 transition-all hover-scale">
+              <button className="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 transition-all hover-scale pulse-slow">
                 Contact Us
               </button>
             </a>

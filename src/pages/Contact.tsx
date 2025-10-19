@@ -23,11 +23,11 @@ const Contact = () => {
           <div className="absolute inset-0 bg-primary/70" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              Contact <span className="text-accent">Us</span>
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 slide-in-bottom">
+              Contact <span className="text-accent float">Us</span>
             </h1>
-            <p className="text-xl text-primary-foreground/90">
+            <p className="text-xl text-primary-foreground/90 slide-in-right" style={{ animationDelay: '0.2s' }}>
               Get in touch with our team for any inquiries
             </p>
           </div>
@@ -39,8 +39,8 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="animate-fade-in">
-              <Card>
+            <div className="slide-in-left">
+              <Card className="hover-scale">
                 <CardHeader>
                   <CardTitle className="text-2xl">Send us a Message</CardTitle>
                 </CardHeader>

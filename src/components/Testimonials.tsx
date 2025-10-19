@@ -26,10 +26,10 @@ export const Testimonials = () => {
   return (
     <section className="py-20 bg-background relative overflow-hidden">
       {/* Decorative orange corner */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF8C00] transform rotate-45 translate-x-32 -translate-y-32" />
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF8C00] transform rotate-45 translate-x-32 -translate-y-32 float" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 slide-in-bottom">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold" style={{ color: '#FF8C00' }}>
             Testimonials
           </h2>
@@ -37,7 +37,7 @@ export const Testimonials = () => {
 
         <div className="relative max-w-6xl mx-auto">
           {/* Central phone mockup placeholder - hidden on mobile to fix layout */}
-          <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[500px] bg-primary rounded-3xl shadow-2xl">
+          <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[500px] bg-primary rounded-3xl shadow-2xl bounce-in" style={{ animationDelay: '0.3s' }}>
             <div className="w-full h-full bg-gradient-to-br from-accent to-primary rounded-3xl p-8 flex items-center justify-center">
               <p className="text-primary-foreground text-center font-semibold">Solar Installation</p>
             </div>
@@ -47,9 +47,9 @@ export const Testimonials = () => {
           <div className="grid md:grid-cols-2 gap-8 md:gap-16">
             {/* Left column */}
             <div className="space-y-8 md:space-y-16">
-              {testimonials.slice(0, 2).map((testimonial) => (
-                <div key={testimonial.id} className="animate-fade-in">
-                  <div className="bg-primary text-primary-foreground rounded-3xl p-6 shadow-lg max-w-sm">
+              {testimonials.slice(0, 2).map((testimonial, index) => (
+                <div key={testimonial.id} className="slide-in-left" style={{ animationDelay: `${index * 0.2}s` }}>
+                  <div className="bg-primary text-primary-foreground rounded-3xl p-6 shadow-lg max-w-sm hover-scale">
                     <p className="text-sm md:text-base mb-4 leading-relaxed">"{testimonial.text}"</p>
                   </div>
                   <div className="mt-3">
@@ -63,8 +63,8 @@ export const Testimonials = () => {
             {/* Right column */}
             <div className="flex items-center">
               {testimonials.slice(2).map((testimonial) => (
-                <div key={testimonial.id} className="animate-fade-in w-full">
-                  <div className="bg-primary text-primary-foreground rounded-3xl p-6 shadow-lg max-w-sm ml-auto">
+                <div key={testimonial.id} className="w-full slide-in-right" style={{ animationDelay: '0.4s' }}>
+                  <div className="bg-primary text-primary-foreground rounded-3xl p-6 shadow-lg max-w-sm ml-auto hover-scale">
                     <p className="text-sm md:text-base mb-4 leading-relaxed">"{testimonial.text}"</p>
                   </div>
                   <div className="mt-3 text-right">

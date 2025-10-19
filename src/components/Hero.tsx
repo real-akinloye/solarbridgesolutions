@@ -20,20 +20,22 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 pt-16">
-        <div className="max-w-3xl mx-auto text-center animate-fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight slide-in-bottom">
             Power Your Home or Business{" "}
-            <span className="text-accent">with Reliable Solar Energy</span>
+            <span className="text-accent float">with Reliable Solar Energy</span>
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 slide-in-left" style={{ animationDelay: '0.2s' }}>
             Affordable, sustainable solar solutions made for Nigeria
           </p>
           <a
             href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-block bounce-in"
+            style={{ animationDelay: '0.4s' }}
           >
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto hover-scale">
+            <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto hover-scale pulse-slow">
               Get a Free Quote
             </Button>
           </a>

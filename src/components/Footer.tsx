@@ -1,15 +1,18 @@
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-xl">SB</span>
-              </div>
+          <div className="animate-fade-in">
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={logo} 
+                alt="Solar Bridge Solution Logo" 
+                className="h-12 w-auto object-contain"
+              />
               <span className="text-xl font-bold">Solar Bridge</span>
             </div>
             <p className="text-primary-foreground/80 mb-4">

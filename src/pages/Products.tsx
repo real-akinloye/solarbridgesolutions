@@ -103,11 +103,11 @@ const Products = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-primary">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              Our <span className="text-accent">Products</span>
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 slide-in-bottom">
+              Our <span className="text-accent float">Products</span>
             </h1>
-            <p className="text-xl text-primary-foreground/90">
+            <p className="text-xl text-primary-foreground/90 slide-in-right" style={{ animationDelay: '0.2s' }}>
               Premium solar equipment for reliable, sustainable energy
             </p>
           </div>
@@ -118,7 +118,7 @@ const Products = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="panels" className="w-full">
-            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-12">
+            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-12 bounce-in">
               <TabsTrigger value="panels">Solar Panels</TabsTrigger>
               <TabsTrigger value="inverters">Inverters</TabsTrigger>
               <TabsTrigger value="batteries">Batteries</TabsTrigger>
@@ -128,7 +128,7 @@ const Products = () => {
             <TabsContent value="panels" className="animate-fade-in">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {solarPanels.map((product, index) => (
-                  <Card key={index} className="overflow-hidden hover-scale">
+                  <Card key={index} className="overflow-hidden hover-scale slide-in-bottom" style={{ animationDelay: `${index * 0.1}s` }}>
                     <CardHeader className="p-0">
                       <div className="aspect-square overflow-hidden bg-secondary">
                         <img
@@ -157,7 +157,7 @@ const Products = () => {
             <TabsContent value="inverters" className="animate-fade-in">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {inverters.map((product, index) => (
-                  <Card key={index} className="overflow-hidden hover-scale">
+                  <Card key={index} className="overflow-hidden hover-scale slide-in-bottom" style={{ animationDelay: `${index * 0.1}s` }}>
                     <CardHeader className="p-0">
                       <div className="aspect-square overflow-hidden bg-secondary">
                         <img
@@ -186,7 +186,7 @@ const Products = () => {
             <TabsContent value="batteries" className="animate-fade-in">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {batteries.map((product, index) => (
-                  <Card key={index} className="overflow-hidden hover-scale">
+                  <Card key={index} className="overflow-hidden hover-scale slide-in-bottom" style={{ animationDelay: `${index * 0.1}s` }}>
                     <CardHeader className="p-0">
                       <div className="aspect-square overflow-hidden bg-secondary">
                         <img
@@ -215,7 +215,7 @@ const Products = () => {
             <TabsContent value="solutions" className="animate-fade-in">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {solutions.map((product, index) => (
-                  <Card key={index} className="overflow-hidden hover-scale">
+                  <Card key={index} className="overflow-hidden hover-scale slide-in-bottom" style={{ animationDelay: `${index * 0.1}s` }}>
                     <CardHeader className="p-0">
                       <div className="aspect-square overflow-hidden bg-secondary">
                         <img
