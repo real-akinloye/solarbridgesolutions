@@ -154,6 +154,29 @@ All colors MUST be HSL.
   .pulse-slow {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+  
+  .rotate-slow {
+    animation: rotate 20s linear infinite;
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  .shimmer {
+    background: linear-gradient(
+      to right,
+      hsl(var(--background)) 0%,
+      hsl(var(--accent) / 0.1) 50%,
+      hsl(var(--background)) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+  }
+  
+  .glow {
+    animation: glow 2s ease-in-out infinite;
+  }
 }
 
 @keyframes slideInLeft {
@@ -212,5 +235,43 @@ All colors MUST be HSL.
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--accent) / 0.8);
   }
 }

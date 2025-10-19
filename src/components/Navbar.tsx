@@ -2,7 +2,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo-new.png";
+import logo from "@/assets/logo-transparent.png";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -14,15 +14,15 @@ export const Navbar = () => {
           <img 
             src={logo} 
             alt="Solar Bridge Solution Logo" 
-            className="h-28 md:h-36 lg:h-44 w-auto object-contain animate-fade-in hover:scale-110 transition-transform duration-300 drop-shadow-2xl brightness-125 contrast-125 saturate-110"
+            className="h-16 md:h-20 lg:h-24 w-auto object-contain float hover:scale-110 transition-transform duration-300 drop-shadow-2xl"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 fade-in-up">
           <Link
             to="/"
-            className={`transition-colors ${
+            className={`transition-all duration-300 hover:scale-110 ${
               location.pathname === "/" ? "text-accent" : "text-primary-foreground hover:text-accent"
             }`}
           >
@@ -30,7 +30,7 @@ export const Navbar = () => {
           </Link>
           <Link
             to="/about"
-            className={`transition-colors ${
+            className={`transition-all duration-300 hover:scale-110 ${
               location.pathname === "/about" ? "text-accent" : "text-primary-foreground hover:text-accent"
             }`}
           >
@@ -38,7 +38,7 @@ export const Navbar = () => {
           </Link>
           <Link
             to="/products"
-            className={`transition-colors ${
+            className={`transition-all duration-300 hover:scale-110 ${
               location.pathname === "/products" ? "text-accent" : "text-primary-foreground hover:text-accent"
             }`}
           >
@@ -46,7 +46,7 @@ export const Navbar = () => {
           </Link>
           <Link
             to="/services"
-            className={`transition-colors ${
+            className={`transition-all duration-300 hover:scale-110 ${
               location.pathname === "/services" ? "text-accent" : "text-primary-foreground hover:text-accent"
             }`}
           >
@@ -54,7 +54,7 @@ export const Navbar = () => {
           </Link>
           <Link
             to="/find-installer"
-            className={`transition-colors ${
+            className={`transition-all duration-300 hover:scale-110 ${
               location.pathname === "/find-installer" ? "text-accent" : "text-primary-foreground hover:text-accent"
             }`}
           >
@@ -62,7 +62,7 @@ export const Navbar = () => {
           </Link>
           <Link
             to="/contact"
-            className={`transition-colors ${
+            className={`transition-all duration-300 hover:scale-110 ${
               location.pathname === "/contact" ? "text-accent" : "text-primary-foreground hover:text-accent"
             }`}
           >
@@ -73,7 +73,7 @@ export const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="hero" size="sm">
+            <Button variant="hero" size="sm" className="hover-scale glow">
               Get a Quote
             </Button>
           </a>
@@ -88,30 +88,32 @@ export const Navbar = () => {
           </SheetTrigger>
           <SheetContent>
             <div className="flex flex-col gap-4 mt-8">
-              <Link to="/" className="text-foreground hover:text-accent transition-colors text-left">
+              <Link to="/" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left">
                 Home
               </Link>
-              <Link to="/about" className="text-foreground hover:text-accent transition-colors text-left">
+              <Link to="/about" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left" style={{ animationDelay: '0.1s' }}>
                 About
               </Link>
-              <Link to="/products" className="text-foreground hover:text-accent transition-colors text-left">
+              <Link to="/products" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left" style={{ animationDelay: '0.2s' }}>
                 Products
               </Link>
-              <Link to="/services" className="text-foreground hover:text-accent transition-colors text-left">
+              <Link to="/services" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left" style={{ animationDelay: '0.3s' }}>
                 Services
               </Link>
-              <Link to="/find-installer" className="text-foreground hover:text-accent transition-colors text-left">
+              <Link to="/find-installer" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left" style={{ animationDelay: '0.4s' }}>
                 Find Installer
               </Link>
-              <Link to="/contact" className="text-foreground hover:text-accent transition-colors text-left">
+              <Link to="/contact" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left" style={{ animationDelay: '0.5s' }}>
                 Contact
               </Link>
               <a
                 href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="slide-in-left"
+                style={{ animationDelay: '0.6s' }}
               >
-                <Button variant="hero" className="w-full">
+                <Button variant="hero" className="w-full hover-scale glow">
                   Get a Quote
                 </Button>
               </a>

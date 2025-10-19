@@ -32,7 +32,7 @@ export const About = () => {
               </p>
             </div>
 
-            <Button variant="hero" size="lg" className="hover-scale pulse-slow">
+            <Button variant="hero" size="lg" className="hover-scale pulse-slow glow">
               Read more
             </Button>
           </div>

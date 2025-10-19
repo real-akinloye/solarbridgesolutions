@@ -42,10 +42,11 @@ export const Products = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <Card 
               key={product.id} 
-              className="overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover-scale"
+              className="overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover-scale fade-in-up"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <CardHeader className="p-0">
                 <div className="aspect-square overflow-hidden bg-secondary">
@@ -61,7 +62,7 @@ export const Products = () => {
                 <p className="text-muted-foreground">{product.description}</p>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Button variant="outline" className="w-full">
+                <Button variant="outline" className="w-full hover-scale">
                   Learn More
                 </Button>
               </CardFooter>
