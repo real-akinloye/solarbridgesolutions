@@ -10,13 +10,12 @@ export const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
+        <Link to="/" className="flex items-center group">
           <img 
             src={logo} 
             alt="Solar Bridge Solution Logo" 
-            className="h-12 w-auto object-contain animate-fade-in hover:scale-110 transition-transform duration-300"
+            className="h-16 md:h-20 w-auto object-contain animate-fade-in hover:scale-110 transition-transform duration-300 drop-shadow-lg"
           />
-          <span className="text-xl font-bold text-primary-foreground group-hover:text-accent transition-colors duration-300">Solar Bridge</span>
         </Link>
 
         {/* Desktop Navigation */}
