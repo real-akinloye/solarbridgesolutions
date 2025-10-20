@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock, Globe } from "lucide-react";
 import contactHeroBg from "@/assets/contact-hero.jpg";
+import nextSteps from "@/assets/next-steps.png";
 
 const Contact = () => {
   return (
@@ -183,6 +184,17 @@ const Contact = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Next Steps Section */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <img 
+            src={nextSteps} 
+            alt="Next Steps - Contact SolarBridge for Free Energy Audit" 
+            className="w-full max-w-5xl mx-auto rounded-lg shadow-lg hover-scale fade-in-up"
+          />
         </div>
       </section>
 
