@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Wrench, Building2, Home, Factory, CheckCircle } from "lucide-react";
+import { Wrench, Building2, Home, Factory, CheckCircle, Lightbulb, Users, Droplets, Shield, DollarSign, Award } from "lucide-react";
 import servicesVideo from "@/assets/services-video.mp4";
 
 const Services = () => {
@@ -97,6 +97,231 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+        {/* Solar Solutions Section */}
+        <section className="py-20 bg-background/95 backdrop-blur-sm">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12 fade-in-up">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Our Solar Solutions Include:
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* For Homes */}
+              <Card className="hover-scale fade-in-up">
+                <CardHeader className="bg-accent/10">
+                  <CardTitle className="text-2xl text-center">For Homes</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Basic lighting and fan systems</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Full home power (TVs, fridges, ACs, etc.)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Battery backup for night use</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* For Businesses & Offices */}
+              <Card className="hover-scale fade-in-up" style={{ animationDelay: '0.1s' }}>
+                <CardHeader className="bg-accent/10">
+                  <CardTitle className="text-2xl text-center">For Businesses & Offices</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Solar UPS for computers and printers</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Power for shops, clinics, and schools</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Solar-powered CCTV and security systems</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* For Communities */}
+              <Card className="hover-scale fade-in-up" style={{ animationDelay: '0.2s' }}>
+                <CardHeader className="bg-accent/10">
+                  <CardTitle className="text-2xl text-center">For Communities</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Street lighting</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Solar borehole (LED poles)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Solar water pumps for clean water</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Off-grid village electrification</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Offer Section */}
+        <section className="py-20 bg-secondary/95 backdrop-blur-sm">
+          <div className="container mx-auto px-4">
+            <div className="mb-12 fade-in-up">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Our <span className="text-accent">Offer</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl">
+                At SolarBridge, we don't just install solar, we deliver complete energy freedom for your business
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="hover-scale fade-in-up">
+                <CardContent className="pt-6">
+                  <Lightbulb className="w-12 h-12 text-accent mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Free Energy Audit:</h3>
+                  <p className="text-muted-foreground">
+                    We'll assess your power usage and show you how much you can save.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-scale fade-in-up" style={{ animationDelay: '0.1s' }}>
+                <CardContent className="pt-6">
+                  <Building2 className="w-12 h-12 text-accent mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Custom System Design:</h3>
+                  <p className="text-muted-foreground">
+                    Solutions built specifically for your business needs—not one-size-fits-all.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-scale fade-in-up" style={{ animationDelay: '0.2s' }}>
+                <CardContent className="pt-6">
+                  <Award className="w-12 h-12 text-accent mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Professional Installation:</h3>
+                  <p className="text-muted-foreground">
+                    Certified engineers ensure safety, durability, and maximum output.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-scale fade-in-up" style={{ animationDelay: '0.3s' }}>
+                <CardContent className="pt-6">
+                  <Wrench className="w-12 h-12 text-accent mb-4" />
+                  <h3 className="text-xl font-bold mb-2">After-Sales Support:</h3>
+                  <p className="text-muted-foreground">
+                    Ongoing monitoring, maintenance, and technical support.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-scale fade-in-up" style={{ animationDelay: '0.4s' }}>
+                <CardContent className="pt-6">
+                  <DollarSign className="w-12 h-12 text-accent mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Flexible Financing:</h3>
+                  <p className="text-muted-foreground">
+                    Pay gradually with plans that make solar affordable.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-scale fade-in-up" style={{ animationDelay: '0.5s' }}>
+                <CardContent className="pt-6">
+                  <Shield className="w-12 h-12 text-accent mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Warranty & Insurance:</h3>
+                  <p className="text-muted-foreground">
+                    25-year warranty on panels; 5–10 years on batteries.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-8 p-6 bg-accent/10 rounded-lg fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <p className="text-lg text-center">
+                With SolarBridge, you get more than solar panels, you get a partner committed to your growth and long-term savings.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Packages Section */}
+        <section className="py-20 bg-background/95 backdrop-blur-sm">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12 fade-in-up">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Our <span className="text-accent">Package</span>
+              </h2>
+            </div>
+
+            <div className="overflow-x-auto fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-primary text-primary-foreground">
+                    <th className="border border-border p-4 text-left">Package</th>
+                    <th className="border border-border p-4 text-left">Suitable For</th>
+                    <th className="border border-border p-4 text-left">System Size</th>
+                    <th className="border border-border p-4 text-left">Cost (₦)</th>
+                    <th className="border border-border p-4 text-left">5-Year Savings</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="hover:bg-accent/5 transition-colors">
+                    <td className="border border-border p-4 font-semibold">Small Business</td>
+                    <td className="border border-border p-4">Boutiques, barbers, small offices</td>
+                    <td className="border border-border p-4">3.5kVA / 5kWh</td>
+                    <td className="border border-border p-4">₦3,000,000</td>
+                    <td className="border border-border p-4">₦5M - ₦10M</td>
+                  </tr>
+                  <tr className="hover:bg-accent/5 transition-colors">
+                    <td className="border border-border p-4 font-semibold">Medium Business</td>
+                    <td className="border border-border p-4">Salons, supermarkets, restaurants</td>
+                    <td className="border border-border p-4">5kVA / 10kWh</td>
+                    <td className="border border-border p-4">₦5,500,000</td>
+                    <td className="border border-border p-4">₦15M - ₦20M</td>
+                  </tr>
+                  <tr className="hover:bg-accent/5 transition-colors">
+                    <td className="border border-border p-4 font-semibold">Large Business</td>
+                    <td className="border border-border p-4">Hotels, schools, factories, big offices</td>
+                    <td className="border border-border p-4">10kVA / 20kWh</td>
+                    <td className="border border-border p-4">₦11,000,000</td>
+                    <td className="border border-border p-4">₦25M - ₦35M</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-8 p-6 bg-accent/10 rounded-lg text-center fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <p className="text-lg font-semibold mb-2">
+                In just 1-2 years, your solar system pays for itself.
+              </p>
+              <p className="text-muted-foreground">
+                In 5 years, your savings are worth 2–3 times your initial investment.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Process Section */}
         <section className="py-20 bg-secondary/95 backdrop-blur-sm">
