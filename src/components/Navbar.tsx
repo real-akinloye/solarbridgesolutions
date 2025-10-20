@@ -8,14 +8,13 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/80 backdrop-blur-md shadow-lg">
-      <nav className="container mx-auto px-4 h-20 md:h-24 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
+      <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center group">
           <img 
             src={logo} 
             alt="Solar Bridge Solution Logo" 
-            className="h-20 md:h-28 lg:h-32 w-auto object-contain hover:scale-110 transition-transform duration-300 mix-blend-normal"
-            style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.1))' }}
+            className="h-16 md:h-20 lg:h-24 w-auto object-contain hover:scale-110 transition-transform duration-300"
           />
         </Link>
 

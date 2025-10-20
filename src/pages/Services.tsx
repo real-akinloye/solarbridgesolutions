@@ -3,9 +3,6 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wrench, Building2, Home, Factory, CheckCircle } from "lucide-react";
 import servicesVideo from "@/assets/services-video.mp4";
-import solarSolutions from "@/assets/solar-solutions.png";
-import ourOffer from "@/assets/our-offer.png";
-import ourPackage from "@/assets/our-package.png";
 
 const Services = () => {
   const services = [
@@ -100,39 +97,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-
-        {/* Solar Solutions Image */}
-        <section className="py-20 bg-background/95 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <img 
-              src={solarSolutions} 
-              alt="Our Solar Solutions Include" 
-              className="w-full max-w-5xl mx-auto rounded-lg shadow-lg hover-scale fade-in-up"
-            />
-          </div>
-        </section>
-
-        {/* Our Offer Image */}
-        <section className="py-20 bg-secondary/95 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <img 
-              src={ourOffer} 
-              alt="Our Offer" 
-              className="w-full max-w-5xl mx-auto rounded-lg shadow-lg hover-scale fade-in-up"
-            />
-          </div>
-        </section>
-
-        {/* Our Package Image */}
-        <section className="py-20 bg-background/95 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <img 
-              src={ourPackage} 
-              alt="Our Package" 
-              className="w-full max-w-5xl mx-auto rounded-lg shadow-lg hover-scale fade-in-up"
-            />
-          </div>
-        </section>
 
         {/* Process Section */}
         <section className="py-20 bg-secondary/95 backdrop-blur-sm">
