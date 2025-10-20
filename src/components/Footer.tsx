@@ -11,7 +11,8 @@ export const Footer = () => {
               <img 
                 src={logo} 
                 alt="Solar Bridge Solution Logo" 
-                className="h-14 w-auto object-contain"
+                className="h-16 md:h-20 w-auto object-contain mix-blend-normal"
+                style={{ filter: 'brightness(1.1)' }}
               />
               <span className="text-xl font-bold">Solar Bridge</span>
             </div>
