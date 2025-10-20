@@ -21,11 +21,11 @@ export const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 pt-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight fade-in-up">
-            Power Your Home or Business{" "}
-            <span className="text-accent shimmer">with Reliable Solar Energy</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+            <span className="inline-block fade-in-left">Power Your Home or Business{" "}</span>
+            <span className="text-accent inline-block fade-in-right animate-pulse" style={{ animationDelay: '0.3s' }}>with Reliable Solar Energy</span>
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 zoom-in" style={{ animationDelay: '0.5s' }}>
             Affordable, sustainable solar solutions made for Nigeria
           </p>
           <a
