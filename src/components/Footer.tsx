@@ -11,7 +11,7 @@ export const Footer = () => {
               <img 
                 src={logo} 
                 alt="Solar Bridge Solution Logo" 
-                className="h-14 w-auto object-contain float"
+                className="h-14 w-auto object-contain"
               />
               <span className="text-xl font-bold">Solar Bridge</span>
             </div>

@@ -14,7 +14,7 @@ export const Navbar = () => {
           <img 
             src={logo} 
             alt="Solar Bridge Solution Logo" 
-            className="h-16 md:h-20 lg:h-24 w-auto object-contain float hover:scale-110 transition-transform duration-300 drop-shadow-2xl"
+            className="h-16 md:h-20 lg:h-24 w-auto object-contain hover:scale-110 transition-transform duration-300"
           />
         </Link>
 

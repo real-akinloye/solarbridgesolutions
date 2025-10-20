@@ -21,11 +21,11 @@ export const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 pt-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight slide-in-bottom">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight fade-in-up">
             Power Your Home or Business{" "}
-            <span className="text-accent float">with Reliable Solar Energy</span>
+            <span className="text-accent shimmer">with Reliable Solar Energy</span>
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 slide-in-left" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 fade-in-up" style={{ animationDelay: '0.2s' }}>
             Affordable, sustainable solar solutions made for Nigeria
           </p>
           <a
@@ -35,7 +35,7 @@ export const Hero = () => {
             className="inline-block bounce-in"
             style={{ animationDelay: '0.4s' }}
           >
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto hover-scale pulse-slow">
+            <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto hover-scale glow">
               Get a Free Quote
             </Button>
           </a>
