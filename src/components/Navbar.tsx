@@ -2,7 +2,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo-transparent.png";
+import logo from "@/assets/logo-main.png";
 
 export const Navbar = () => {
   const location = useLocation();
