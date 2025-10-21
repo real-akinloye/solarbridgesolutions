@@ -45,8 +45,7 @@ export const Products = () => {
           {products.map((product, index) => (
             <Card 
               key={product.id} 
-              className="overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover-scale fade-in-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover-scale fade-in-up anim-delay-${index * 200}`}
             >
               <CardHeader className="p-0">
                 <div className="aspect-square overflow-hidden bg-secondary">
