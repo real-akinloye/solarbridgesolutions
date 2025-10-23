@@ -104,16 +104,6 @@ export const Navbar = () => {
           </SheetTrigger>
           <SheetContent>
             <div className="flex flex-col gap-4 mt-8">
-              <a
-                href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348146249855"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="slide-in-left"
-              >
-                <Button variant="hero" className="w-full hover-scale glow rounded-lg mb-2">
-                  Get a Quote
-                </Button>
-              </a>
               <Link to="/" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left">
                 Home
               </Link>
@@ -132,16 +122,6 @@ export const Navbar = () => {
               <Link to="/contact" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left anim-delay-500">
                 Contact
               </Link>
-              <a
-                href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348146249855"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="slide-in-left anim-delay-600"
-              >
-                <Button variant="hero" className="w-full hover-scale glow rounded-lg">
-                  Get a Quote
-                </Button>
-              </a>
             </div>
           </SheetContent>
         </Sheet>
