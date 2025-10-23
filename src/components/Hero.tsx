@@ -29,7 +29,7 @@ export const Hero = () => {
             Affordable, sustainable solar solutions made for Nigeria
           </p>
             <a
-            href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
+            href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348146249855"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bounce-in"

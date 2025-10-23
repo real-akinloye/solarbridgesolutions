@@ -85,7 +85,7 @@ export const Navbar = () => {
             Contact
           </Link>
           <a
-            href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
+            href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348146249855"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -105,7 +105,7 @@ export const Navbar = () => {
           <SheetContent>
             <div className="flex flex-col gap-4 mt-8">
               <a
-                href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
+                href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348146249855"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="slide-in-left"
@@ -133,7 +133,7 @@ export const Navbar = () => {
                 Contact
               </Link>
               <a
-                href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
+                href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348146249855"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="slide-in-left anim-delay-600"
