@@ -127,7 +127,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Email</h3>
                         <a href="mailto:info@solarbridgesolution.com" className="text-muted-foreground hover:text-accent transition-colors">
-                          info@solarbridgesolution.com
+                          support@solarbridgesolution.com
                         </a>
                       </div>
                     </div>
