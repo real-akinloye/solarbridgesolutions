@@ -43,7 +43,7 @@ export const ServicesPreview = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="hover-scale bg-card fade-in-up hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className={`hover-scale bg-card fade-in-up hover:shadow-lg transition-shadow duration-300 anim-delay-${index * 100}`}>
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-accent mx-auto rounded-none flex items-center justify-center mb-4 hover:rotate-12 transition-transform duration-300">
                     <Icon className="w-8 h-8 text-accent-foreground" />
@@ -56,7 +56,7 @@ export const ServicesPreview = () => {
           })}
         </div>
 
-        <div className="text-center fade-in-up" style={{ animationDelay: '0.5s' }}>
+  <div className="text-center fade-in-up anim-delay-500">
           <Link to="/services">
             <Button size="lg" variant="default" className="hover-scale glow">
               View All Services

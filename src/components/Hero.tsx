@@ -28,14 +28,18 @@ export const Hero = () => {
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 zoom-in" style={{ animationDelay: '0.5s' }}>
             Affordable, sustainable solar solutions made for Nigeria
           </p>
-          <a
+            <a
             href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bounce-in"
             style={{ animationDelay: '0.4s' }}
           >
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto hover-scale glow">
+            <Button
+              variant="hero"
+              size="lg"
+              className="text-lg px-8 py-3 h-auto bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md transform transition-transform duration-200 hover:scale-105"
+            >
               Get a Free Quote
             </Button>
           </a>

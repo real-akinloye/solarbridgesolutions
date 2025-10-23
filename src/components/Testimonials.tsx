@@ -22,7 +22,41 @@ const testimonials = [
   }
 ];
 
+import React, { useEffect, useRef } from 'react';
+
 export const Testimonials = () => {
+  const leftRefs = useRef<HTMLDivElement[]>([]);
+  const rightRefs = useRef<HTMLDivElement[]>([]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // trigger pulse on left items
+      leftRefs.current.forEach((el, i) => {
+        if (!el) return;
+        el.classList.add('edge-pulse-active-left');
+        setTimeout(() => el.classList.remove('edge-pulse-active-left'), 1100);
+      });
+      // trigger pulse on right items
+      rightRefs.current.forEach((el, i) => {
+        if (!el) return;
+        el.classList.add('edge-pulse-active-right');
+        setTimeout(() => el.classList.remove('edge-pulse-active-right'), 1100);
+      });
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const setLeftRef = (el: HTMLDivElement | null, index: number) => {
+    if (!el) return;
+    leftRefs.current[index] = el;
+  };
+
+  const setRightRef = (el: HTMLDivElement | null, index: number) => {
+    if (!el) return;
+    rightRefs.current[index] = el;
+  };
+
   return (
     <section className="py-20 bg-background relative overflow-hidden">
       {/* Decorative orange corner */}
@@ -30,14 +64,14 @@ export const Testimonials = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 slide-in-bottom">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bounce-in" style={{ color: '#FF8C00' }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bounce-in text-[#FF8C00]">
             Testimonials
           </h2>
         </div>
 
         <div className="relative max-w-6xl mx-auto">
           {/* Central phone mockup placeholder - hidden on mobile to fix layout */}
-          <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[500px] bg-primary rounded-3xl shadow-2xl bounce-in glow" style={{ animationDelay: '0.3s' }}>
+          <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[500px] bg-primary rounded-3xl shadow-2xl bounce-in glow anim-delay-300">
             <div className="w-full h-full bg-gradient-to-br from-accent to-primary rounded-3xl p-8 flex items-center justify-center">
               <p className="text-primary-foreground text-center font-semibold">Solar Installation</p>
             </div>
@@ -48,12 +82,12 @@ export const Testimonials = () => {
             {/* Left column */}
             <div className="space-y-8 md:space-y-16">
               {testimonials.slice(0, 2).map((testimonial, index) => (
-                <div key={testimonial.id} className="slide-in-left fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div ref={(el) => setLeftRef(el, index)} key={testimonial.id} className={`slide-in-edge-left fade-in-up anim-delay-${Math.round(index * 250)}`}>
                   <div className="bg-primary text-primary-foreground rounded-3xl p-6 shadow-lg max-w-sm hover-scale glow">
                     <p className="text-sm md:text-base mb-4 leading-relaxed">"{testimonial.text}"</p>
                   </div>
                   <div className="mt-3">
-                    <p className="font-bold" style={{ color: '#FF8C00' }}>{testimonial.name}</p>
+                    <p className="font-bold text-[#FF8C00]">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.company}</p>
                   </div>
                 </div>
@@ -62,13 +96,13 @@ export const Testimonials = () => {
 
             {/* Right column */}
             <div className="flex items-center">
-              {testimonials.slice(2).map((testimonial) => (
-                <div key={testimonial.id} className="w-full slide-in-right fade-in-up" style={{ animationDelay: '0.4s' }}>
+              {testimonials.slice(2).map((testimonial, index) => (
+                <div ref={(el) => setRightRef(el, index)} key={testimonial.id} className={`w-full slide-in-edge-right fade-in-up anim-delay-${Math.round((0.4 + index * 0.2) * 1000)}`}>
                   <div className="bg-primary text-primary-foreground rounded-3xl p-6 shadow-lg max-w-sm ml-auto hover-scale glow">
                     <p className="text-sm md:text-base mb-4 leading-relaxed">"{testimonial.text}"</p>
                   </div>
                   <div className="mt-3 text-right">
-                    <p className="font-bold" style={{ color: '#FF8C00' }}>{testimonial.name}</p>
+                    <p className="font-bold text-[#FF8C00]">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.company}</p>
                   </div>
                 </div>

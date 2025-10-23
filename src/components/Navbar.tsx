@@ -2,20 +2,36 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo-main.png";
+import LogoSvg from '@/components/LogoSvg';
+import { useEffect, useRef, useState } from 'react';
 
 export const Navbar = () => {
   const location = useLocation();
+  const [visible, setVisible] = useState(true);
+  const rafRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      rafRef.current = requestAnimationFrame(() => {
+        const isTop = window.scrollY <= 20;
+        setVisible(isTop);
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm transform transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center group">
-          <img 
-            src={logo} 
-            alt="Solar Bridge Solution Logo" 
-            className="h-16 md:h-20 lg:h-24 w-auto object-contain hover:scale-110 transition-transform duration-300"
-          />
+          <LogoSvg className="w-[180px] h-[80px]" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -73,7 +89,7 @@ export const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="hero" size="sm" className="hover-scale glow">
+            <Button variant="hero" size="sm" className="hover-scale glow rounded-lg">
               Get a Quote
             </Button>
           </a>
@@ -88,32 +104,41 @@ export const Navbar = () => {
           </SheetTrigger>
           <SheetContent>
             <div className="flex flex-col gap-4 mt-8">
+              <a
+                href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="slide-in-left"
+              >
+                <Button variant="hero" className="w-full hover-scale glow rounded-lg mb-2">
+                  Get a Quote
+                </Button>
+              </a>
               <Link to="/" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left">
                 Home
               </Link>
-              <Link to="/about" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left" style={{ animationDelay: '0.1s' }}>
+              <Link to="/about" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left anim-delay-100">
                 About
               </Link>
-              <Link to="/products" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left" style={{ animationDelay: '0.2s' }}>
+              <Link to="/products" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left anim-delay-200">
                 Products
               </Link>
-              <Link to="/services" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left" style={{ animationDelay: '0.3s' }}>
+              <Link to="/services" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left anim-delay-300">
                 Services
               </Link>
-              <Link to="/find-installer" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left" style={{ animationDelay: '0.4s' }}>
+              <Link to="/find-installer" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left anim-delay-400">
                 Find Installer
               </Link>
-              <Link to="/contact" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left" style={{ animationDelay: '0.5s' }}>
+              <Link to="/contact" className="text-foreground hover:text-accent transition-all duration-300 text-left hover-scale slide-in-left anim-delay-500">
                 Contact
               </Link>
               <a
                 href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20a%20free%20quote&phone=2348171479561"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="slide-in-left"
-                style={{ animationDelay: '0.6s' }}
+                className="slide-in-left anim-delay-600"
               >
-                <Button variant="hero" className="w-full hover-scale glow">
+                <Button variant="hero" className="w-full hover-scale glow rounded-lg">
                   Get a Quote
                 </Button>
               </a>

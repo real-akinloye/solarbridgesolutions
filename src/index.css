@@ -138,6 +138,17 @@ All colors MUST be HSL.
   .slide-in-right {
     animation: slideInRight 0.6s ease-out;
   }
+
+  /* Slide from extreme edges of the viewport */
+  .slide-in-edge-left {
+    animation: slideInEdgeLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+  }
+
+  .slide-in-edge-right {
+    animation: slideInEdgeRight 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+  }
   
   .slide-in-bottom {
     animation: slideInBottom 0.6s ease-out;
@@ -189,6 +200,29 @@ All colors MUST be HSL.
   .zoom-in {
     animation: zoomIn 0.6s ease-out;
   }
+  
+    /* animation delay utilities (in ms) */
+    .anim-delay-0{animation-delay:0ms}
+    .anim-delay-50{animation-delay:50ms}
+    .anim-delay-100{animation-delay:100ms}
+    .anim-delay-150{animation-delay:150ms}
+    .anim-delay-200{animation-delay:200ms}
+    .anim-delay-250{animation-delay:250ms}
+    .anim-delay-300{animation-delay:300ms}
+    .anim-delay-350{animation-delay:350ms}
+    .anim-delay-400{animation-delay:400ms}
+    .anim-delay-450{animation-delay:450ms}
+    .anim-delay-500{animation-delay:500ms}
+    .anim-delay-550{animation-delay:550ms}
+    .anim-delay-600{animation-delay:600ms}
+    .anim-delay-650{animation-delay:650ms}
+    .anim-delay-700{animation-delay:700ms}
+    .anim-delay-750{animation-delay:750ms}
+    .anim-delay-800{animation-delay:800ms}
+    .anim-delay-850{animation-delay:850ms}
+    .anim-delay-900{animation-delay:900ms}
+    .anim-delay-950{animation-delay:950ms}
+    .anim-delay-1000{animation-delay:1000ms}
 }
 
 @keyframes slideInLeft {
@@ -211,6 +245,51 @@ All colors MUST be HSL.
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@keyframes slideInEdgeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInEdgeRight {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Periodic pulse: slide out to edge then back */
+@keyframes pulseEdgeLeft {
+  0% { transform: translateX(0); opacity: 1; }
+  10% { transform: translateX(-100vw); opacity: 0; }
+  30% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulseEdgeRight {
+  0% { transform: translateX(0); opacity: 1; }
+  10% { transform: translateX(100vw); opacity: 0; }
+  30% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.edge-pulse-active-left {
+  animation: pulseEdgeLeft 1s ease-in-out;
+}
+
+.edge-pulse-active-right {
+  animation: pulseEdgeRight 1s ease-in-out;
 }
 
 @keyframes slideInBottom {

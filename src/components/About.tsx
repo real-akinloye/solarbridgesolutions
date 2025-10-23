@@ -37,7 +37,7 @@ export const About = () => {
             </Button>
           </div>
 
-          <div className="relative slide-in-right" style={{ animationDelay: '0.2s' }}>
+          <div className="relative slide-in-right anim-delay-200">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl hover-scale">
               <img 
                 src={aboutImage} 
