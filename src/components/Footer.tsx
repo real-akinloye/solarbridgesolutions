@@ -8,9 +8,9 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground py-12 relative">
       <div className="container mx-auto px-4 pt-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div className="fade-in-up">
-            <div className="absolute top-3 left-3">
-                <LogoSvg className="w-[220px] h-[100px]" />
+          <div className="fade-in-up flex flex-col items-start gap-4">
+            <div>
+              <LogoSvg className="w-[220px] h-[100px]" />
             </div>
             <p className="text-primary-foreground/80 mb-4">
               Leading provider of sustainable solar energy solutions in Nigeria.
