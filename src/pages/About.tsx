@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Navbar } from "@/components/Navbar";
+import React from "react";
+import { Navbar } from "@/components/NavbarClean";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import aboutImage from "@/assets/solar-installation.jpg";
@@ -143,118 +143,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* Contact Form (integrated with Formspree) */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-card p-8 rounded-lg shadow-md animate-fade-in">
-            <h2 className="text-3xl font-bold text-foreground mb-2">Get in touch</h2>
-            <p className="text-muted-foreground mb-6">Have a project or question? Send us a message and we'll get back to you.</p>
-
-            <ContactForm />
-          </div>
-        </div>
-      </section>
+      {/* Contact section removed per request */}
 
       <Footer />
     </div>
   );
 };
 
-const ContactForm: React.FC = () => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("sending");
-
-    try {
-      const form = new FormData();
-      form.append("name", name);
-      form.append("email", email);
-      form.append("message", message);
-
-      const res = await fetch("https://formspree.io/f/mqaygqry", {
-        method: "POST",
-        body: form,
-      });
-
-      if (res.ok) {
-        setStatus("success");
-        setName("");
-        setEmail("");
-        setMessage("");
-      } else {
-        setStatus("error");
-      }
-    } catch (err) {
-      setStatus("error");
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-4" aria-live="polite">
-      {status === "success" && (
-        <div className="p-3 bg-green-50 border border-green-200 rounded flex items-start gap-3">
-          <CheckCircle2 className="w-6 h-6 text-green-600 mt-0.5" />
-          <div>
-            <p className="font-semibold text-green-700">Message sent</p>
-            <p className="text-sm text-green-700/90">Thanks for contacting us. We'll reply shortly.</p>
-          </div>
-        </div>
-      )}
-
-      {status === "error" && (
-        <div className="p-3 bg-red-50 border border-red-200 rounded text-red-700">
-          Something went wrong. Please try again later.
-        </div>
-      )}
-
-      <div>
-        <label className="block text-sm font-medium text-muted-foreground">Full name</label>
-        <input
-          type="text"
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="mt-1 block w-full rounded-md border border-border px-3 py-2 bg-input text-foreground"
-          placeholder="Your full name"
-        />
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-muted-foreground">Email address</label>
-        <input
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="mt-1 block w-full rounded-md border border-border px-3 py-2 bg-input text-foreground"
-          placeholder="you@company.com"
-        />
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-muted-foreground">Message</label>
-        <textarea
-          required
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="mt-1 block w-full rounded-md border border-border px-3 py-2 bg-input text-foreground min-h-[120px]"
-          placeholder="Tell us about your project"
-        />
-      </div>
-
-      <div className="flex items-center gap-3">
-        <Button type="submit" disabled={status === "sending"}>
-          {status === "sending" ? "Sending..." : "Send message"}
-        </Button>
-        <span className="text-sm text-muted-foreground">We typically reply within 24 hours.</span>
-      </div>
-    </form>
-  );
-};
+// Contact form removed per user request
 
 export default About;

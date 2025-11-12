@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/NavbarClean";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -96,7 +96,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Office</h3>
-                        <p className="text-muted-foreground">7, Jeminata Street, Alagba, Agege, Lagos State</p>
+                        <p className="text-muted-foreground">7, Jeminata Street, Alagba Estate, Lagos State</p>
                       </div>
                     </div>
                   </CardContent>

@@ -1,17 +1,19 @@
-import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
-import LogoSvg from "@/components/LogoSvg";
-import Logo from "@/components/Logo";
-import xIcon from "@/assets/x.svg";
+import { Facebook, Instagram, Mail, Phone, MapPin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
+import logoPng from "@/assets/logo.png";
 
 export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-12 relative">
-      <div className="container mx-auto px-4 pt-12">
+      {/* Logo: use same plain image as navbar and place it at the top of the footer content */}
+      <div className="container mx-auto px-4">
+            <Link to="/" className="flex items-center group pt-2 md:pt-1 mb-2">
+          <img src={logoPng} alt="Solar Bridge Solutions" className="w-[180px] h-auto object-contain" />
+        </Link>
+      </div>
+      <div className="container mx-auto px-4 pt-0">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div className="fade-in-up flex flex-col items-start gap-4">
-            <div>
-              <LogoSvg className="w-[220px] h-[100px]" />
-            </div>
             <p className="text-primary-foreground/80 mb-4">
               Leading provider of sustainable solar energy solutions in Nigeria.
             </p>
@@ -35,45 +37,57 @@ export const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://x.com/solarbrigde"
+                href="https://twitter.com/solarbrigde"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-accent rounded-full flex items-center justify-center transition-all duration-300 hover-scale"
-                aria-label="X"
+                aria-label="Twitter"
               >
-                <svg className="w-5 h-5 text-black" viewBox="0 0 24 24" role="img" aria-label="X logo">
-                  <rect x="4" y="11" width="16" height="2" rx="1" transform="rotate(45 12 12)" fill="currentColor" />
-                  <rect x="4" y="11" width="16" height="2" rx="1" transform="rotate(-45 12 12)" fill="currentColor" />
-                </svg>
+                <Twitter className="w-5 h-5" />
               </a>
             </div>
             
           </div>
 
           <div className="fade-in-up anim-delay-200">
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#home" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#products" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
-                  Contact
-                </a>
-              </li>
-            </ul>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/projects-completed" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/products" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
+                    Products
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/find-installer" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
+                    Find Installer
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="text-primary-foreground/80 hover:text-accent transition-all duration-300 hover:translate-x-2 inline-block">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
           </div>
 
           <div className="fade-in-up anim-delay-400">
@@ -81,7 +95,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 hover-scale">
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-                <span className="text-primary-foreground/80">7, Jeminata Street, Alagba, Agege, Lagos State</span>
+                <span className="text-primary-foreground/80">7, Jeminata Street, Alagba Estate, Lagos State</span>
               </li>
               <li className="flex items-center gap-3 hover-scale">
                 <Phone className="w-5 h-5 flex-shrink-0" />

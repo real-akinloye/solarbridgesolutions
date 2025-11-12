@@ -1,13 +1,16 @@
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/NavbarClean";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import solarPanelImage from "@/assets/solar-panel.jpg";
-import inverterImage from "@/assets/inverter.jpg";
 import inverterNewImage from "@/assets/inverter-new.png";
-import batteryImage from "@/assets/battery.jpg";
+import inverterNewJpg from "@/assets/inverter-new.jpg";
+import batteryImage from "@/assets/battery.jpeg";
 import batteryNewImage from "@/assets/battery-new.jpg";
+import batteryOld from "@/assets/battery-old.jpg";
+import waBatteryA from "@/assets/WhatsApp Image 2025-11-01 at 8.42.56 AM.jpeg";
+import waBatteryB from "@/assets/WhatsApp Image 2025-11-01 at 8.42.57 AM.jpeg";
 import estateMiniGridImage from "@/assets/estate-mini-grid.jpg";
 import floatingSolarImage from "@/assets/floating-solar.jpg";
 import centralizedSolarImage from "@/assets/centralized-solar.jpg";
@@ -19,14 +22,14 @@ const Products = () => {
       name: "Monocrystalline 450W",
       power: "450W",
       efficiency: "21.5%",
-      warranty: "25 Years",
+      warranty: "10 Years",
       image: solarPanelImage
     },
     {
       name: "Monocrystalline 550W",
       power: "550W",
       efficiency: "22.0%",
-      warranty: "25 Years",
+      warranty: "10 Years",
       image: solarPanelImage
     }
   ];
@@ -37,32 +40,33 @@ const Products = () => {
       capacity: "5.5kVA",
       type: "Hybrid",
       warranty: "5 Years",
-      image: inverterImage
+      image: inverterNewJpg
     },
     {
       name: "Hybrid 10kVA",
       capacity: "10kVA",
       type: "Hybrid",
       warranty: "5 Years",
-      image: inverterImage
+      image: inverterNewImage
     }
   ];
 
   const batteries = [
-    {
-      name: "Lithium 5.12kWh",
-      capacity: "5.12kWh",
-      type: "Lithium",
-      warranty: "10 Years",
-      image: batteryNewImage
-    },
     {
       name: "Deep Cycle 200Ah",
       capacity: "200Ah",
       type: "Deep Cycle",
       warranty: "2 Years",
       image: batteryImage
-    }
+    },
+    {
+      name: "SRNE Wall Battery",
+      capacity: "5–10kWh (varies)",
+      type: "LiFePO₄",
+      warranty: "5 Years",
+      image: batteryOld
+    },
+    // Felicity Battery Pack removed per request
   ];
 
   const solutions = [
@@ -147,7 +151,7 @@ const Products = () => {
                       </div>
                     </CardContent>
                     <CardFooter className="p-6 pt-0">
-                      <Button variant="heroOutline" className="w-full">Get Quote</Button>
+                      <Button variant="hero" className="w-full">Get Quote</Button>
                     </CardFooter>
                   </Card>
                 ))}
@@ -176,7 +180,7 @@ const Products = () => {
                       </div>
                     </CardContent>
                     <CardFooter className="p-6 pt-0">
-                      <Button variant="heroOutline" className="w-full">Get Quote</Button>
+                      <Button variant="hero" className="w-full">Get Quote</Button>
                     </CardFooter>
                   </Card>
                 ))}
@@ -205,7 +209,7 @@ const Products = () => {
                       </div>
                     </CardContent>
                     <CardFooter className="p-6 pt-0">
-                      <Button variant="heroOutline" className="w-full">Get Quote</Button>
+                      <Button variant="hero" className="w-full">Get Quote</Button>
                     </CardFooter>
                   </Card>
                 ))}
@@ -236,7 +240,7 @@ const Products = () => {
                       </div>
                     </CardContent>
                     <CardFooter className="p-6 pt-0">
-                      <Button variant="heroOutline" className="w-full">Get Quote</Button>
+                      <Button variant="hero" className="w-full">Get Quote</Button>
                     </CardFooter>
                   </Card>
                 ))}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/NavbarClean";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import servicesVideo from "@/assets/services-video.mp4";

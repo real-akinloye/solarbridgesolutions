@@ -2,13 +2,14 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Button } from "@/components/ui/button";
 import solarPanelImage from "@/assets/solar-panel.jpg";
 import inverterImage from "@/assets/inverter-new.jpg";
-import batteryImage from "@/assets/battery.jpg";
+import batteryImage from "@/assets/battery.jpeg";
+import batteryNewImage from "@/assets/battery-new.jpg";
 
 const products = [
   {
     id: 1,
     title: "Solar Panels",
-    description: "High-efficiency monocrystalline panels with 25-year warranty",
+    description: "High-efficiency monocrystalline panels",
     image: solarPanelImage,
   },
   {
@@ -22,6 +23,12 @@ const products = [
     title: "Batteries",
     description: "Long-lasting lithium and deep-cycle battery storage systems",
     image: batteryImage,
+  },
+  {
+    id: 4,
+    title: "Batteries (Premium)",
+    description: "High-performance LiFePO₄ batteries for homes and businesses",
+    image: batteryNewImage,
   },
 ];
 
