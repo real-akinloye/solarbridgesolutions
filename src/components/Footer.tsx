@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground py-12 relative">
       {/* Logo: use same plain image as navbar and place it at the top of the footer content */}
       <div className="container mx-auto px-4">
-        <Link to="/" className="flex items-center group pt-2 md:pt-1 mb-2">
+        <Link to="/" className="flex items-center group pt-2 md:pt-1 mb-2 -ml-4">
           <img src={logoPng} alt="Solar Bridge Solutions" className="w-[180px] h-auto object-contain" />
         </Link>
       </div>
