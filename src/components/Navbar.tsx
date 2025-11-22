@@ -29,10 +29,9 @@ export const Navbar = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm transform transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
-      <nav className="w-full mx-auto pl-4 pr-4 md:pl-6 md:pr-6 h-24 flex items-center justify-between">
-        <Link to="/" className="flex items-center group mr-auto">
-          {/* Plain image - no background wrapper per request */}
-          <img src={logoPng} alt="SolarBridge Solution" className="w-[180px] h-auto object-contain" />
+      <nav className="w-full mx-auto pr-4 md:pr-6 h-24 flex items-center justify-between">
+        <Link to="/" className="flex items-center group">
+          <img src={logoPng} alt="SolarBridge Solution" className="w-[180px] h-auto object-contain ml-0" />
         </Link>
 
         {/* Desktop Navigation */}
