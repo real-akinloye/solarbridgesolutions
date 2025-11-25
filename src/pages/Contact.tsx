@@ -6,8 +6,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import contactHeroBg from "@/assets/contact-hero.jpg";
+import { toast } from "sonner";
 
 const Contact = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast.success("Message sent successfully! We'll get back to you soon.");
+  };
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -45,7 +50,7 @@ const Contact = () => {
                   <CardTitle className="text-3xl">Send us a Message</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
                         Full Name
