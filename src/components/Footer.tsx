@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Mail, Phone, MapPin, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoPng from "@/assets/logo-transparent-clean.png";
+import { LogoClean } from "@/components/LogoClean";
 
 export const Footer = () => {
   return (
@@ -8,7 +8,7 @@ export const Footer = () => {
       {/* Logo: use same plain image as navbar and place it at the top of the footer content */}
       <div className="container mx-auto px-4">
         <Link to="/" className="flex items-center group mb-6">
-          <img src={logoPng} alt="Solar Bridge Solutions" className="h-[52px] w-auto object-contain" />
+          <LogoClean className="h-12 md:h-14 w-auto" />
         </Link>
       </div>
       <div className="container mx-auto px-4 pt-0">

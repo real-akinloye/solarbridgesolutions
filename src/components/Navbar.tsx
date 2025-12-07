@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from 'react';
-import logoPng from "@/assets/logo-transparent-clean.png";
+import { LogoClean } from "@/components/LogoClean";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -31,7 +31,7 @@ export const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm transform transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <nav className="w-full mx-auto pl-4 pr-4 md:pl-6 md:pr-6 h-24 flex items-center justify-between">
         <Link to="/" className="flex items-center group">
-          <img src={logoPng} alt="SolarBridge Solution" className="h-[52px] w-auto object-contain" />
+          <LogoClean className="h-12 md:h-14 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
