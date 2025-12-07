@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Mail, Phone, MapPin, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoPng from "@/assets/logo-new-clean.png";
+import logoPng from "@/assets/logo-transparent-clean.png";
 
 export const Footer = () => {
   return (
