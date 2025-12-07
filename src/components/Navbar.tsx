@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from 'react';
-import logoPng from "@/assets/logo-new-clean.png";
+import logoPng from "@/assets/logo-transparent-clean.png";
 
 export const Navbar = () => {
   const location = useLocation();
