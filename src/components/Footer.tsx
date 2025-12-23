@@ -8,7 +8,7 @@ export const Footer = () => {
       {/* Logo: use same plain image as navbar and place it at the top of the footer content */}
       <div className="container mx-auto px-4">
         <Link to="/" className="flex items-center group mb-6 -ml-2">
-          <img src={logoPng} alt="Solar Bridge Solutions" className="w-[200px] md:w-[220px] h-auto object-contain" />
+          <img src={logoPng} alt="Solar Bridge Solutions" className="w-[260px] md:w-[300px] h-auto object-contain" />
         </Link>
       </div>
       <div className="container mx-auto px-4 pt-0">
