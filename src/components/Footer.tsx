@@ -6,12 +6,12 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-12 relative">
       {/* Logo: use same plain image as navbar and place it at the top of the footer content */}
-      <div className="container mx-auto px-0">
+      <div className="container mx-auto px-4 md:px-6">
         <Link to="/" className="flex items-center group mb-6">
           <img src={logoPng} alt="Solar Bridge Solutions" className="w-[200px] md:w-[220px] h-auto object-contain" />
         </Link>
       </div>
-      <div className="container mx-auto px-0 pt-0">
+      <div className="container mx-auto px-4 md:px-6 pt-0">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div className="fade-in-up flex flex-col items-start gap-4">
             <p className="text-primary-foreground/80 mb-4">
