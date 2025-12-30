@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/NavbarClean";
+import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail } from "lucide-react";
@@ -54,7 +54,7 @@ const FindInstaller = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 slide-in-bottom">
               Find an <span className="text-accent float">Installer</span>
             </h1>
-            <p className="text-xl text-primary-foreground/90 slide-in-right anim-delay-200">
+            <p className="text-xl text-primary-foreground/90 slide-in-right" style={{ animationDelay: '0.2s' }}>
               Locate our service centers across Nigeria
             </p>
           </div>
@@ -77,7 +77,8 @@ const FindInstaller = () => {
             {locations.map((location, index) => (
               <Card 
                 key={index} 
-                className={`hover-scale slide-in-bottom anim-delay-${index * 100}`}
+                className="hover-scale slide-in-bottom" 
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
                   <CardTitle className="text-2xl text-accent">{location.city}</CardTitle>
@@ -117,10 +118,11 @@ const FindInstaller = () => {
               Contact our customer service team and we'll connect you with the nearest installer
             </p>
             <a
-              href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20help%20finding%20an%20installer&phone=2348146249855"
+              href="https://api.whatsapp.com/send/?text=Hi%20Solar%20Bridge,%20I%20need%20help%20finding%20an%20installer&phone=2348171479561"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bounce-in anim-delay-300"
+              className="inline-block bounce-in"
+              style={{ animationDelay: '0.3s' }}
             >
               <button className="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 transition-all hover-scale pulse-slow">
                 Contact Us

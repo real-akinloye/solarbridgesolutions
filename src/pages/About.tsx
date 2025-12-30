@@ -1,8 +1,7 @@
-import React from "react";
-import { Navbar } from "@/components/NavbarClean";
+import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import aboutImage from "@/assets/solar-installation.jpg";
+import aboutImage from "@/assets/about-solar.jpg";
 import { CheckCircle2 } from "lucide-react";
 
 const About = () => {
@@ -30,10 +29,10 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Leading Solar Energy Provider 
+                Leading Solar Energy Provider Since 2016
               </h2>
               <p className="text-lg text-muted-foreground">
-                Solar Bridge Solutions has grown to become one of the most recognized and trusted solar energy brands in Nigeria.
+                Established in 2016 and headquartered in Festac, Lagos, Solar Bridge Solutions has grown to become one of the most recognized and trusted solar energy brands in Nigeria.
               </p>
               <p className="text-lg text-muted-foreground">
                 With a strong focus on sales and after-sales support, we have built a robust network of over 12 service centers across Nigeria—ensuring fast, efficient, and professional assistance for our customers nationwide.
@@ -54,41 +53,21 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission, Vision & Core Values (animated) */}
+      {/* Mission & Vision */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-12 items-start">
-            <div className="space-y-4 animate-fade-in slide-in-bottom anim-delay-100">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-4 animate-fade-in">
               <h2 className="text-3xl font-bold text-foreground">Our Mission</h2>
               <p className="text-lg text-muted-foreground">
-                To free Nigerian businesses from fuel dependency.
+                To provide affordable, reliable, and sustainable solar energy solutions that empower homes and businesses across Nigeria to achieve energy independence while contributing to a cleaner environment.
               </p>
             </div>
-
-            <div className="space-y-4 animate-fade-in slide-in-bottom anim-delay-200">
+            <div className="space-y-4 animate-fade-in">
               <h2 className="text-3xl font-bold text-foreground">Our Vision</h2>
               <p className="text-lg text-muted-foreground">
-                A Nigeria where every business is powered by safe, sustainable energy.
+                To become Nigeria's leading renewable energy company, transforming the nation's energy landscape through innovative solar solutions and exceptional customer service.
               </p>
-            </div>
-
-            <div className="space-y-4 animate-fade-in slide-in-bottom anim-delay-300">
-              <h2 className="text-3xl font-bold text-foreground">Our Core Values</h2>
-              <p className="text-lg text-muted-foreground">We stand for:</p>
-              <ul className="space-y-3 mt-2">
-                {[
-                  "Innovation",
-                  "Reliability",
-                  "Safety",
-                  "Affordability",
-                  "Sustainability",
-                ].map((val, i) => (
-                  <li key={val} className={`flex items-center gap-3 text-muted-foreground anim-delay-${i * 75}`}>
-                    <CheckCircle2 className="w-5 h-5 text-accent" />
-                    <span className="font-medium text-foreground">{val}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
@@ -143,13 +122,9 @@ const About = () => {
         </div>
       </section>
 
-      {/* Contact section removed per request */}
-
       <Footer />
     </div>
   );
 };
-
-// Contact form removed per user request
 
 export default About;

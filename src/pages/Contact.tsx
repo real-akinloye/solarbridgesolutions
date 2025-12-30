@@ -1,18 +1,13 @@
-import { Navbar } from "@/components/NavbarClean";
+import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Globe } from "lucide-react";
 import contactHeroBg from "@/assets/contact-hero.jpg";
-import { toast } from "sonner";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Message sent successfully! We'll get back to you soon.");
-  };
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -32,7 +27,7 @@ const Contact = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 slide-in-bottom">
               Contact <span className="text-accent float">Us</span>
             </h1>
-            <p className="text-xl text-primary-foreground/90 slide-in-right anim-delay-200">
+            <p className="text-xl text-primary-foreground/90 slide-in-right" style={{ animationDelay: '0.2s' }}>
               Get in touch with our team for any inquiries
             </p>
           </div>
@@ -47,10 +42,10 @@ const Contact = () => {
             <div className="slide-in-left">
               <Card className="hover-scale">
                 <CardHeader>
-                  <CardTitle className="text-3xl">Send us a Message</CardTitle>
+                  <CardTitle className="text-2xl">Send us a Message</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form className="space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
                         Full Name
@@ -101,7 +96,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Office</h3>
-                        <p className="text-muted-foreground">7, Jeminata Street, Alagba Estate, Lagos State</p>
+                        <p className="text-muted-foreground">7, Jeminata Street, Alagba, Agege, Lagos State</p>
                       </div>
                     </div>
                   </CardContent>
@@ -132,7 +127,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Email</h3>
                         <a href="mailto:info@solarbridgesolution.com" className="text-muted-foreground hover:text-accent transition-colors">
-                          support@solarbridgesolution.com
+                          info@solarbridgesolution.com
                         </a>
                       </div>
                     </div>
@@ -154,7 +149,22 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                {/* Website & Social Media removed as requested */}
+                <Card className="hover-scale">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Globe className="w-6 h-6 text-accent" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-1">Website & Social Media</h3>
+                        <a href="https://solarbridgesolution.com.ng" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors block mb-1">
+                          solarbridgesolution.com.ng
+                        </a>
+                        <p className="text-muted-foreground text-sm">@SolarBridgeSolutions on Facebook | Instagram | TikTok</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
 
               {/* WhatsApp Button */}

@@ -32,12 +32,12 @@ export const About = () => {
               </p>
             </div>
 
-            <Button variant="hero" size="lg" className="hover-scale pulse-slow glow">
+            <Button variant="hero" size="lg" className="hover-scale pulse-slow">
               Read more
             </Button>
           </div>
 
-          <div className="relative slide-in-right anim-delay-200">
+          <div className="relative slide-in-right" style={{ animationDelay: '0.2s' }}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl hover-scale">
               <img 
                 src={aboutImage} 
