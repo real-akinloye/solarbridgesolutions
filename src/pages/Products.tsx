@@ -1,13 +1,16 @@
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/NavbarClean";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import solarPanelImage from "@/assets/solar-panel.jpg";
-import inverterImage from "@/assets/inverter.jpg";
 import inverterNewImage from "@/assets/inverter-new.png";
-import batteryImage from "@/assets/battery.jpg";
+import inverterNewJpg from "@/assets/inverter-new.jpg";
+import batteryImage from "@/assets/battery.jpeg";
 import batteryNewImage from "@/assets/battery-new.jpg";
+import batteryOld from "@/assets/battery-old.jpg";
+import waBatteryA from "@/assets/WhatsApp Image 2025-11-01 at 8.42.56 AM.jpeg";
+import waBatteryB from "@/assets/WhatsApp Image 2025-11-01 at 8.42.57 AM.jpeg";
 import estateMiniGridImage from "@/assets/estate-mini-grid.jpg";
 import floatingSolarImage from "@/assets/floating-solar.jpg";
 import centralizedSolarImage from "@/assets/centralized-solar.jpg";
@@ -19,14 +22,14 @@ const Products = () => {
       name: "Monocrystalline 450W",
       power: "450W",
       efficiency: "21.5%",
-      warranty: "25 Years",
+      warranty: "10 Years",
       image: solarPanelImage
     },
     {
       name: "Monocrystalline 550W",
       power: "550W",
       efficiency: "22.0%",
-      warranty: "25 Years",
+      warranty: "10 Years",
       image: solarPanelImage
     }
   ];
@@ -37,32 +40,33 @@ const Products = () => {
       capacity: "5.5kVA",
       type: "Hybrid",
       warranty: "5 Years",
-      image: inverterImage
+      image: inverterNewJpg
     },
     {
       name: "Hybrid 10kVA",
       capacity: "10kVA",
       type: "Hybrid",
       warranty: "5 Years",
-      image: inverterImage
+      image: inverterNewImage
     }
   ];
 
   const batteries = [
-    {
-      name: "Lithium 5.12kWh",
-      capacity: "5.12kWh",
-      type: "Lithium",
-      warranty: "10 Years",
-      image: batteryNewImage
-    },
     {
       name: "Deep Cycle 200Ah",
       capacity: "200Ah",
       type: "Deep Cycle",
       warranty: "2 Years",
       image: batteryImage
-    }
+    },
+    {
+      name: "SRNE Wall Battery",
+      capacity: "5–10kWh (varies)",
+      type: "LiFePO₄",
+      warranty: "5 Years",
+      image: batteryOld
+    },
+    // Felicity Battery Pack removed per request
   ];
 
   const solutions = [
@@ -107,7 +111,7 @@ const Products = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 slide-in-bottom">
               Our <span className="text-accent float">Products</span>
             </h1>
-            <p className="text-xl text-primary-foreground/90 slide-in-right" style={{ animationDelay: '0.2s' }}>
+            <p className="text-xl text-primary-foreground/90 slide-in-right anim-delay-200">
               Premium solar equipment for reliable, sustainable energy
             </p>
           </div>
@@ -128,7 +132,7 @@ const Products = () => {
             <TabsContent value="panels" className="animate-fade-in">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {solarPanels.map((product, index) => (
-                  <Card key={index} className="overflow-hidden hover-scale slide-in-bottom" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <Card key={index} className={`overflow-hidden hover-scale slide-in-bottom anim-delay-${index * 100}`}>
                     <CardHeader className="p-0">
                       <div className="aspect-square overflow-hidden bg-secondary">
                         <img
@@ -157,7 +161,7 @@ const Products = () => {
             <TabsContent value="inverters" className="animate-fade-in">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {inverters.map((product, index) => (
-                  <Card key={index} className="overflow-hidden hover-scale slide-in-bottom" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <Card key={index} className={`overflow-hidden hover-scale slide-in-bottom anim-delay-${index * 100}`}>
                     <CardHeader className="p-0">
                       <div className="aspect-square overflow-hidden bg-secondary">
                         <img
@@ -186,7 +190,7 @@ const Products = () => {
             <TabsContent value="batteries" className="animate-fade-in">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {batteries.map((product, index) => (
-                  <Card key={index} className="overflow-hidden hover-scale slide-in-bottom" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <Card key={index} className={`overflow-hidden hover-scale slide-in-bottom anim-delay-${index * 100}`}>
                     <CardHeader className="p-0">
                       <div className="aspect-square overflow-hidden bg-secondary">
                         <img
@@ -215,7 +219,7 @@ const Products = () => {
             <TabsContent value="solutions" className="animate-fade-in">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {solutions.map((product, index) => (
-                  <Card key={index} className="overflow-hidden hover-scale slide-in-bottom" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <Card key={index} className={`overflow-hidden hover-scale slide-in-bottom anim-delay-${index * 100}`}>
                     <CardHeader className="p-0">
                       <div className="aspect-square overflow-hidden bg-secondary">
                         <img

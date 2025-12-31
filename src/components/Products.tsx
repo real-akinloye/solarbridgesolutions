@@ -2,13 +2,14 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Button } from "@/components/ui/button";
 import solarPanelImage from "@/assets/solar-panel.jpg";
 import inverterImage from "@/assets/inverter-new.jpg";
-import batteryImage from "@/assets/battery.jpg";
+import batteryImage from "@/assets/battery.jpeg";
+import batteryNewImage from "@/assets/battery-new.jpg";
 
 const products = [
   {
     id: 1,
     title: "Solar Panels",
-    description: "High-efficiency monocrystalline panels with 25-year warranty",
+    description: "High-efficiency monocrystalline panels",
     image: solarPanelImage,
   },
   {
@@ -22,6 +23,12 @@ const products = [
     title: "Batteries",
     description: "Long-lasting lithium and deep-cycle battery storage systems",
     image: batteryImage,
+  },
+  {
+    id: 4,
+    title: "Batteries (Premium)",
+    description: "High-performance LiFePO₄ batteries for homes and businesses",
+    image: batteryNewImage,
   },
 ];
 
@@ -42,10 +49,10 @@ export const Products = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <Card 
               key={product.id} 
-              className="overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover-scale"
+              className={`overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover-scale fade-in-up anim-delay-${index * 200}`}
             >
               <CardHeader className="p-0">
                 <div className="aspect-square overflow-hidden bg-secondary">
@@ -61,7 +68,7 @@ export const Products = () => {
                 <p className="text-muted-foreground">{product.description}</p>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Button variant="outline" className="w-full">
+                <Button variant="outline" className="w-full hover-scale">
                   Learn More
                 </Button>
               </CardFooter>
